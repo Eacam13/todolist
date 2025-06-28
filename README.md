@@ -30,8 +30,7 @@ Repositório inicial para um projeto backend usando NestJS, com foco em escalabi
 - [TypeScript](https://www.typescriptlang.org/) — Superset do JavaScript com tipagem estática
 - [Prisma ORM](https://www.prisma.io/) — ORM moderno para banco de dados SQL
 - [Swagger](https://swagger.io/) — Documentação automática da API
-- [Jest](https://jestjs.io/) — Testes automatizados
-- ESLint & Prettier — Formatação e padrões de código
+- [NeonDB](https://neon.com/) — Banco de dados (PostgresSQL) 
 
 ---
 
@@ -46,45 +45,71 @@ git clone https://github.com/seu-usuario/todolist.git
 cd todolist
 npm install
 
+```
+
 ## Configuração do Banco de Dados
-Configure o arquivo .env com sua string de conexão do banco de dados:
+
+### Configure o arquivo .env com sua string de conexão do banco de dados:
 
 ```env
 DATABASE_URL="postgresql://usuario:senha@localhost:5432/todolist"
 
-## Execute migrações e gere o cliente Prisma:
+```
+### Execute migrações e gere o cliente Prisma:
 
 ```bash
 npx prisma migrate dev --name init
 npx prisma generate
 
-## 🚀 Como executar
-# Comando	           # Descrição
-npm run start	         Inicia a aplicação
-npm run start:dev	     Inicia em modo desenvolvimento (com watch)
-npm run start:prod	   Inicia em modo produção
+```
 
-# A aplicação ficará disponível em:
+## 🚀 Como executar
+
+| Comando             | Descrição                                   |
+|---------------------|---------------------------------------------|
+| `npm run start`     | Inicia a aplicação                          |
+| `npm run start:dev` | Inicia em modo desenvolvimento (com watch) |
+| `npm run start:prod`| Inicia em modo produção                     |
+
+
+### A aplicação ficará disponível em:
+```bash
 http://localhost:3000
 
-## 📂 Estrutura do projeto
+```
+---
+
+### 📚 Documentação da API
+
+Acesse a documentação interativa Swagger em:
+
+```bash
+http://localhost:3000/docs
+
+```
+
+A documentação inclui detalhes de endpoints, parâmetros, modelos de dados e exemplos de requisições/respostas.
+
+---
+
+## Organização
 
 ![Logo do projeto](public/projetotodonest.png)
 
 ## 🔮 Próximos passos / melhorias
 Implementar autenticação JWT e proteção de rotas
 
-Criar módulos para login e registro
+- Criar módulos para login e registro
 
-Adicionar filtros avançados (por status, datas etc)
+- Adicionar filtros avançados (por status, datas etc)
 
-Configurar deploy para ambiente de produção
+- Configurar deploy para ambiente de produção
 
 ## 🤝 Suporte e contato
 
-Projeto mantido por Celio Almeida – github.com/Eacam13
+- Projeto mantido por Celio Almeida – github.com/Eacam13
 
-Para dúvidas ou contribuições, abra uma issue ou pull request.
+- Para dúvidas ou contribuições, abra uma issue ou pull request.
 
 ## 📜 Licença
-Projeto licenciado como UNLICENSED — uso pessoal e interno somente.
+- Projeto licenciado como UNLICENSED — uso pessoal e interno somente.
